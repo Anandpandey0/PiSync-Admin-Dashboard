@@ -1,5 +1,5 @@
 {
-    "name": "fullstack-app",
+    "name": "pisync-admin",
     "private": true,
     "scripts": {
       "install-all": "npm install --prefix frontend && npm install --prefix backend",

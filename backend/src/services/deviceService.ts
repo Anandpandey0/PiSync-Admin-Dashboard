@@ -60,9 +60,13 @@ export async function syncDevice(deviceId:string):Promise<IDevice>{
 
 const statuses: ('Success' | 'Pending' | 'Failed')[] = ['Success', 'Pending', 'Failed'];
 
-
-
-//ADD dummy data 
+//Utils function
+function getRandomDateInPast(daysBack: number): Date {
+  const now = new Date();
+  const pastTime = now.getTime() - Math.floor(Math.random() * daysBack * 24 * 60 * 60 * 1000);
+  return new Date(pastTime);
+}
+//Add Dummy Data 
 export async function seedDevices(count: number): Promise<IDevice[]> {
   const dummyDevices = [];
 
@@ -71,7 +75,7 @@ export async function seedDevices(count: number): Promise<IDevice[]> {
 
     dummyDevices.push({
       name: `Device-${Date.now()}-${i}`,
-      lastSyncTime: null, // you can also randomize this if you want
+      lastSyncTime: randomStatus === 'Success' ? getRandomDateInPast(30) : null,
       syncStatus: randomStatus,
     });
   }
