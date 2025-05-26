@@ -75,14 +75,14 @@ const DeviceManagementTable = () => {
         d.name ?? 'N/A',
         d.lastSyncTime ? new Date( d.lastSyncTime).toLocaleString() : 'N/A', // Convert into readable Date and time
         d.syncStatus ?? 'N/A',
-        <button onClick={() => handleSync(d._id)} disabled={syncingId === d._id} className='px-4 py-2 border-2 ml-4 rounded-md font-bold border-black'>
+        <button onClick={() => handleSync(d._id)} disabled={syncingId === d._id} className='px-4 py-2 border-2 ml-4 rounded-md font-bold border-black cursor-pointer'>
             {syncingId === d._id ? 'Syncing Device...' : 'Sync Now'}
         </button>,
     ]);
 
     return (
         <div>
-            <button onClick={handleAddDummy} disabled={actionLoading} className='float-right mr-16 font-bold border-black px-4 py-2 border-2 ml-4 rounded-md  '>
+            <button onClick={handleAddDummy} disabled={actionLoading} className='float-right mr-16 font-bold border-black px-4 py-2 border-2 ml-4 rounded-md cursor-pointer  '>
                 {actionLoading ? 'Adding...' : 'Add Dummy Devices Data'}
             </button>
             {loading ? <p>Loading...</p> : <Table title="Devices Table" headers={headersArray} rows={rows} />}
@@ -90,7 +90,7 @@ const DeviceManagementTable = () => {
                 <button
                     onClick={() => setPage((p) => p - 1)}
                     disabled={page === 1}
-                    className="px-3 py-1 border border-gray-400 bg-gray-100 text-sm disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="px-3 py-1 border border-gray-400 bg-gray-100 text-sm disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
                 >
                     Previous
                 </button>

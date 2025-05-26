@@ -15,7 +15,7 @@ const DashboardPage = () => {
           {/* Button which will render the Device Management Table */}
           <button
             onClick={() => setActiveTab('DeviceManagementTable')}
-            className={`px-4 py-2 border-2 rounded-md ${
+            className={`px-4 py-2 border-2 rounded-md cursor-pointer ${
               activeTab === 'DeviceManagementTable'
                 ? 'font-bold border-black'
                 : 'font-normal border-gray-300'
@@ -26,7 +26,7 @@ const DashboardPage = () => {
           {/* Button that renders the Error logs table */}
           <button
             onClick={() => setActiveTab('RecentErrorsTable')}
-            className={`px-4 py-2 border-2 rounded-md ${
+            className={`px-4 py-2 border-2 rounded-md cursor-pointer ${
               activeTab === 'RecentErrorsTable'
                 ? 'font-bold border-black'
                 : 'font-normal border-gray-300'

@@ -52,7 +52,7 @@ const RecentErrorsTable = () => {
 
   return (
     <div>
-      <button onClick={handleAddDummy} disabled={actionLoading} className='float-right mr-16 font-bold border-black px-4 py-2 border-2 ml-4 rounded-md  '>
+      <button onClick={handleAddDummy} disabled={actionLoading} className='float-right mr-16 font-bold border-black px-4 py-2 border-2 ml-4 rounded-md  cursor-pointer'>
         {actionLoading ? 'Adding...' : 'Add Dummy Errors Data'}
       </button>
       {loading ? <p>Loading...</p> : <Table title="Errors Table" headers={headersArray} rows={rows} />}
@@ -60,7 +60,7 @@ const RecentErrorsTable = () => {
         <button
           onClick={() => setPage((p) => p - 1)}
           disabled={page === 1}
-          className="px-3 py-1 border border-gray-400 bg-gray-100 text-sm disabled:opacity-50 disabled:cursor-not-allowed"
+          className="px-3 py-1 border border-gray-400 bg-gray-100 text-sm disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
         >
           Previous
         </button>
@@ -70,7 +70,7 @@ const RecentErrorsTable = () => {
         <button
           onClick={() => setPage((p) => p + 1)}
           disabled={page === totalPages}
-          className="px-3 py-1 border border-gray-400 bg-gray-100 text-sm disabled:opacity-50 disabled:cursor-not-allowed"
+          className="px-3 py-1 border border-gray-400 bg-gray-100 text-sm disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer" 
         >
           Next
         </button>
