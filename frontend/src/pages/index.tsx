@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import DeviceManagementTable from '@/components/DevicesManagementTable';
 import RecentErrorsTable from '@/components/RecentErrorsTable';
 import Header from '@/components/Header';
@@ -6,6 +6,10 @@ import Header from '@/components/Header';
 const DashboardPage = () => {
   // State to handle the table selection
   const [activeTab, setActiveTab] = useState<'DeviceManagementTable' | 'RecentErrorsTable'>('DeviceManagementTable');
+
+  useEffect(()=>{
+    
+  })
 
   return (
     <>
