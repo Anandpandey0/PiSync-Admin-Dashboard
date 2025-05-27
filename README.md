@@ -33,3 +33,10 @@ MONGO_URI=mongodb+srv://pisync-admin:1234@cluster0.hiodfqg.mongodb.net/
 Start the development server
 npm run dev
 
+
+use Following login Credentials
+
+
+username : pisync@pw.live
+password : 1234
+
